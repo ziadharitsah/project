@@ -11,6 +11,11 @@ class _RegisterState extends State<Register> {
   File? _profileImage;
 
   final _signupFormKey = GlobalKey<FormState>();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController passwordConfirmationController =
+      TextEditingController();
 
   Future _pickProfileImage() async {
     try {
@@ -87,6 +92,7 @@ class _RegisterState extends State<Register> {
                         height: 16,
                       ),
                       CustomInputField(
+                          controller: nameController,
                           labelText: 'Name',
                           hintText: 'Your name',
                           isDense: true,
@@ -100,6 +106,7 @@ class _RegisterState extends State<Register> {
                         height: 16,
                       ),
                       CustomInputField(
+                          controller: emailController,
                           labelText: 'Email',
                           hintText: 'Your email id',
                           isDense: true,
@@ -116,6 +123,7 @@ class _RegisterState extends State<Register> {
                         height: 16,
                       ),
                       CustomInputField(
+                          controller: passwordController,
                           labelText: 'Contact no.',
                           hintText: 'Your contact number',
                           isDense: true,
@@ -129,6 +137,7 @@ class _RegisterState extends State<Register> {
                         height: 16,
                       ),
                       CustomInputField(
+                        controller: passwordConfirmationController,
                         labelText: 'Password',
                         hintText: 'Your password',
                         isDense: true,

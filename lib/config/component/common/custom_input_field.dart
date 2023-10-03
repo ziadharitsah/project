@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomInputField extends StatefulWidget {
   final String labelText;
+  final TextEditingController controller;
   final String hintText;
   final String? Function(String?) validator;
   final bool suffixIcon;
@@ -10,6 +11,7 @@ class CustomInputField extends StatefulWidget {
 
   const CustomInputField(
       {Key? key,
+      required this.controller,
       required this.labelText,
       required this.hintText,
       required this.validator,

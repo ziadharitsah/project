@@ -9,6 +9,7 @@ class ForgotPasswordPage extends StatefulWidget {
 
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   final _forgetPasswordFormKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -34,6 +35,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                           title: 'Forgot password',
                         ),
                         CustomInputField(
+                            controller: emailController,
                             labelText: 'Email',
                             hintText: 'Your email id',
                             isDense: true,

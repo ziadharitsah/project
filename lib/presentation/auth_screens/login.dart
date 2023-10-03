@@ -9,6 +9,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _loginFormKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,6 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                           title: 'Log-in',
                         ),
                         CustomInputField(
+                            controller: emailController,
                             labelText: 'Email',
                             hintText: 'Your email id',
                             validator: (textValue) {
@@ -50,6 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 16,
                         ),
                         CustomInputField(
+                          controller: passwordController,
                           labelText: 'Password',
                           hintText: 'Your password',
                           obscureText: true,
