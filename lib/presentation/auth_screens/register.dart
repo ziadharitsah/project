@@ -39,7 +39,7 @@ class _RegisterState extends State<Register> {
             key: _signupFormKey,
             child: Column(
               children: [
-                const PageHeader(),
+                const PageHeaderRegister(),
                 Container(
                   decoration: const BoxDecoration(
                     color: Colors.white,
@@ -123,28 +123,32 @@ class _RegisterState extends State<Register> {
                         height: 16,
                       ),
                       CustomInputField(
-                          controller: passwordController,
-                          labelText: 'Contact no.',
-                          hintText: 'Your contact number',
-                          isDense: true,
-                          validator: (textValue) {
-                            if (textValue == null || textValue.isEmpty) {
-                              return 'Contact number is required!';
-                            }
-                            return null;
-                          }),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      CustomInputField(
-                        controller: passwordConfirmationController,
+                        controller: passwordController,
                         labelText: 'Password',
-                        hintText: 'Your password',
+                        hintText: ' Create your password',
                         isDense: true,
                         obscureText: true,
                         validator: (textValue) {
                           if (textValue == null || textValue.isEmpty) {
                             return 'Password is required!';
+                          }
+                          return null;
+                        },
+                        suffixIcon: true,
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      CustomInputField(
+                        controller: passwordConfirmationController,
+                        labelText: 'Password Confirmation',
+                        hintText: ' Create your password confirmation',
+                        isDense: true,
+                        obscureText: true,
+                        validator: (textValue) {
+                          if (textValue == null ||
+                              textValue != passwordController.text) {
+                            return 'Confirm password does not match';
                           }
                           return null;
                         },

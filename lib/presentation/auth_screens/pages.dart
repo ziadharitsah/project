@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:project/config/component/common/custom_input_field.dart';
+import 'package:project/config/component/common/page_header_regiter.dart';
 
 import '../../config/component/common/custom_form_button.dart';
 import '../../config/component/common/page_header.dart';

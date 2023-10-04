@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class PageHeader extends StatelessWidget {
-  const PageHeader({Key? key}) : super(key: key);
+class PageHeaderRegister extends StatelessWidget {
+  const PageHeaderRegister({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class PageHeader extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: size.height * 0.3,
-      child: Lottie.asset('assets/images/1.json'),
+      child: Lottie.asset('assets/images/register.json'),
     );
   }
 }
